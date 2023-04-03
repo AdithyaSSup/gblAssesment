@@ -1,9 +1,9 @@
-package strategy;
+package com.gbl.task.strategy;
 
 import com.gbl.task.app.Cuisine;
 import com.gbl.task.app.Restaurant;
 import com.gbl.task.app.User;
-import util.RestaurantRatingComparator;
+import com.gbl.task.util.RestaurantRatingComparator;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,7 +1,7 @@
 package com.gbl.task;
 
 import com.gbl.task.app.*;
-import strategy.*;
+import com.gbl.task.strategy.*;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -16,8 +16,8 @@ public class Application {
 
         User user = createUser(restaurants);
 
-        System.out.println(" primary cuisine of user : "+ user.getPrimaryCuisine());
-        System.out.println(" primary costBracket user : "+ user.getPrimaryCostBracket());
+        System.out.println(" primary cuisine of user : " + user.getPrimaryCuisine());
+        System.out.println(" primary costBracket user : " + user.getPrimaryCostBracket());
 
         List<RestaurantSortingStrategy> sortingStrategies = createSortingStrategies();
 
@@ -25,22 +25,22 @@ public class Application {
 
         List<String> recommendations = engine.getRestaurantRecommendations(user, restaurants);
 
-        System.out.println("total recommended restaurants "+ recommendations.size());
+        System.out.println("total recommended restaurants " + recommendations.size());
 
-        recommendations.forEach( rst ->
-                System.out.println(" restaurant id "+rst)
+        recommendations.forEach(rst ->
+                System.out.println(" restaurant id " + rst)
         );
 
     }
 
     private static User createUser(List<Restaurant> restaurants) {
-        User user = new User( new CuisineTracking[]{}, new CostTracking[]{}, new Random().nextInt(1000));
-        for( int i =0; i< 10 ; i++){
-            System.out.println("User : "+user.getId()+" Ordering From Restaurant id:"
-                    +restaurants.get(i).getId()+" , cuisine " +restaurants.get(i).getCuisine()
-                    +", is recommended :" +restaurants.get(i).isRecommended()+", cost bracket :"
-                    +restaurants.get(i).getCostBracket()+" Rating :"
-                    +restaurants.get(i).getRating());
+        User user = new User(new CuisineTracking[]{}, new CostTracking[]{}, new Random().nextInt(1000));
+        for (int i = 0; i < 10; i++) {
+            System.out.println("User : " + user.getId() + " Ordering From Restaurant id:"
+                    + restaurants.get(i).getId() + " , cuisine " + restaurants.get(i).getCuisine()
+                    + ", is recommended :" + restaurants.get(i).isRecommended() + ", cost bracket :"
+                    + restaurants.get(i).getCostBracket() + " Rating :"
+                    + restaurants.get(i).getRating());
             user.updateTrackers(restaurants.get(i));
         }
         return user;
@@ -56,11 +56,10 @@ public class Application {
             float rating = new Random().nextFloat() * 5.0f;
             boolean isRecommended = new Random().nextBoolean();
             Date onboardedTime = new Date();
-            restaurants.add(new Restaurant(id, cuisine,costBracket,rating,isRecommended,onboardedTime));
+            restaurants.add(new Restaurant(id, cuisine, costBracket, rating, isRecommended, onboardedTime));
         }
         return restaurants;
     }
-
 
 
     private static List<RestaurantSortingStrategy> createSortingStrategies() {

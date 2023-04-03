@@ -1,6 +1,6 @@
 package com.gbl.task.app;
 
-import strategy.RestaurantSortingStrategy;
+import com.gbl.task.strategy.RestaurantSortingStrategy;
 
 import java.util.ArrayList;
 import java.util.HashSet;

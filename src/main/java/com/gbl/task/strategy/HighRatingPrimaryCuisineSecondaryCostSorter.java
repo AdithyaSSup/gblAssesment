@@ -1,26 +1,24 @@
-package strategy;
+package com.gbl.task.strategy;
 
 import com.gbl.task.app.Cuisine;
 import com.gbl.task.app.Restaurant;
 import com.gbl.task.app.User;
-import util.RestaurantRatingComparator;
+import com.gbl.task.util.RestaurantRatingComparator;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
-public class HighRatingSecondaryCuisinePrimaryCostSorter implements RestaurantSortingStrategy {
+public class HighRatingPrimaryCuisineSecondaryCostSorter implements RestaurantSortingStrategy {
 
     @Override
     public List<Restaurant> sortRestaurants(User user,List<Restaurant> restaurants) {
         List<Restaurant> sortedRestaurants = new ArrayList<>();
 
-        List<Cuisine> secondaryCuisines = user.getSecondaryCuisines();
-        int primaryCostBracket = user.getPrimaryCostBracket();
+        Cuisine primaryCuisine = user.getPrimaryCuisine();
+        int[] secondaryCostBracket = user.getSecondaryCostBrackets();
 
         for (Restaurant restaurant : restaurants) {
-            if (secondaryCuisines.contains(restaurant.getCuisine()) &&
-                    restaurant.getCostBracket() == primaryCostBracket &&
+            if (restaurant.getCuisine() == primaryCuisine &&
+                    Arrays.binarySearch(secondaryCostBracket, restaurant.getCostBracket()) >= 0 &&
                     restaurant.getRating() >= 4.5) {
                 sortedRestaurants.add(restaurant);
                 if(sortedRestaurants.size() >100){

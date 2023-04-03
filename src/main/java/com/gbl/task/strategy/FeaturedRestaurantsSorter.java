@@ -1,4 +1,4 @@
-package strategy;
+package com.gbl.task.strategy;
 
 import com.gbl.task.app.Cuisine;
 import com.gbl.task.app.Restaurant;

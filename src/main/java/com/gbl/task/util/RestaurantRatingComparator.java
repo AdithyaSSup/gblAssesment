@@ -1,4 +1,4 @@
-package util;
+package com.gbl.task.util;
 
 import com.gbl.task.app.Restaurant;
 
