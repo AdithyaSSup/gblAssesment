@@ -1,7 +1,7 @@
 package com.gbl.task;
 
 import com.gbl.task.app.*;
-import stratergy.*;
+import strategy.*;
 
 import java.util.ArrayList;
 import java.util.Date;
