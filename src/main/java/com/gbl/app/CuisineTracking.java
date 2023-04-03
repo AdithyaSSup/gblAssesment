@@ -1,6 +1,4 @@
-package com.gbl.task.app;
-
-import com.gbl.task.app.Cuisine;
+package com.gbl.app;
 
 public class CuisineTracking {
     private Cuisine type;

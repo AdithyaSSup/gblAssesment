@@ -1,9 +1,9 @@
-package com.gbl.task.strategy;
+package com.gbl.strategy;
 
-import com.gbl.task.app.Cuisine;
-import com.gbl.task.app.Restaurant;
-import com.gbl.task.app.User;
-import com.gbl.task.util.RestaurantRatingComparator;
+import com.gbl.app.Cuisine;
+import com.gbl.app.Restaurant;
+import com.gbl.app.User;
+import com.gbl.util.RestaurantRatingComparator;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,7 +12,7 @@ import java.util.List;
 public class LowRatingPrimaryCuisineSecondaryCostSorter implements RestaurantSortingStrategy {
 
     @Override
-    public List<Restaurant> sortRestaurants(User user,List<Restaurant> restaurants) {
+    public List<Restaurant> sortRestaurants(User user, List<Restaurant> restaurants) {
         List<Restaurant> sortedRestaurants = new ArrayList<>();
         Cuisine primaryCuisine = user.getPrimaryCuisine();
         int[] secondaryCostBrackets = user.getSecondaryCostBrackets();

@@ -1,4 +1,4 @@
-package com.gbl.task.app;
+package com.gbl.app;
 
 public class CostTracking {
     private int type;

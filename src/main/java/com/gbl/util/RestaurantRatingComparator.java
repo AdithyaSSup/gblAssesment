@@ -1,6 +1,6 @@
-package com.gbl.task.util;
+package com.gbl.util;
 
-import com.gbl.task.app.Restaurant;
+import com.gbl.app.Restaurant;
 
 import java.util.Comparator;
 

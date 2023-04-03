@@ -1,7 +1,7 @@
-package com.gbl.task.strategy;
+package com.gbl.strategy;
 
-import com.gbl.task.app.Restaurant;
-import com.gbl.task.app.User;
+import com.gbl.app.Restaurant;
+import com.gbl.app.User;
 
 import java.util.ArrayList;
 import java.util.List;

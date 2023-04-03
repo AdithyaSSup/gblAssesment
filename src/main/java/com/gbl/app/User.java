@@ -1,8 +1,4 @@
-package com.gbl.task.app;
-
-import com.gbl.task.app.CostTracking;
-import com.gbl.task.app.Cuisine;
-import com.gbl.task.app.CuisineTracking;
+package com.gbl.app;
 
 import java.util.ArrayList;
 import java.util.Arrays;
