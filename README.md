@@ -1,13 +1,14 @@
 ## Restaurant Recommendation Engine
-This project is a restaurant recommendation engine that recommends the top 100 restaurants for a given user. It takes into account the user's preferred cuisines and cost brackets, as well as other factors such as the restaurant's rating, popularity, and distance.
+This project is a restaurant recommendation engine that recommends the top 100 restaurants for a given user. It takes into account the user's preferred cuisines and cost brackets, as well as other factors such as the restaurant's rating,featured and Date.
 
 ### Getting Started
 To use the recommendation engine, follow these steps:
 
 1. Clone the repository to your local machine.
-2. Import the project into IDE.
+2. Import the project into IDE(IntelliJ or Eclipse or Any other JVM supported IDE).
 3. Build the project using your IDE's build tool or by running the appropriate command in your terminal or command prompt
 4. Run the project using your IDE's run tool or by running the appropriate command in your terminal or command prompt. You will need to specify the main class which is present in Application.java
+5. A sample run will return 100 unique restaurant ID's printed on console.
 
 User Order data and Restaurant is auto populated with random data, However it can configured.
 
