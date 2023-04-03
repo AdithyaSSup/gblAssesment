@@ -64,6 +64,8 @@ public class Application {
 
 
     private static List<RestaurantSortingStrategy> createSortingStrategies() {
+        // Filtering Steps can be configured here
+        // Each class is filtering step returning list of restaurant ids.
         List<RestaurantSortingStrategy> sortingStrategies = new ArrayList<>();
         sortingStrategies.add(new FeaturedRestaurantsSorter());
         sortingStrategies.add(new HighRatingPrimaryCuisineCostSorter());
